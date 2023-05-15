@@ -1,2 +1,2 @@
-# anooshkhashetty.github.io
+# AnooshkhaShetty.github.io
 wowaoahh my own website
