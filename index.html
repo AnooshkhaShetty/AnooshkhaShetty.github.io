@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+<style>
+  :root {
+     --size: 1.8;
+     --cursor-line: 0.2;
+    --background: #d6ffda;
+    --color: #00412e;
+  }
+  </style>
+    <title>☆anooshkha☆</title>
+  </head>
+
+  <body>
+    <script>
+$('body').terminal({
+    explore: function() {
+        this.echo(' some suggested commands:\n\tabout\n\tcurrent\n\temail\n\tsecret\n hint: there are more commands. feel free to try other keywords!');
+    },
+    about: function() {
+      this.echo(" I major in mathematics and computer science at UCLA. \n I'm also part of ACM TeachLA! \n Fun fact: I love the color green.");
+    },
+    current: function() {
+      this.echo(" Located in Los Angeles, CA finishing up my second year of undergrad!");
+    },
+//     twitter: function() {
+//       const twitter = $('<a>',{
+//     text:'@ronawang',
+//     href:'https://twitter.com/ronawang'
+// });
+//       this.echo(twitter);
+//     },
+    email: function() {
+      const email = $('<a>',{
+    text:'anooshkhashetty@gmail.com',
+    href:'mailto:anooshkhashetty@gmail.com'
+});
+      this.echo(email);
+    },
+//     substack: function() {
+//       const substack = $('<a>',{
+//     text:'return on net assets',
+//     href:'https://rona.substack.com'
+// });
+//       this.echo(substack);
+//     },
+    secret: function() {
+      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    },
+    // pikachu: function() {
+    //   window.location.href = "https://www.youtube.com/watch?v=ycdcDFuGarM";
+    // },
+    // money: function() {
+    //   this.echo(" venmo ~worstinstituteoftechnology");
+    // },
+    // hi: function() {
+    //   this.echo(" lo");
+    // },
+    // hello: function() {
+    //   this.echo(" world");
+    // },
+    // goodnight: function() {
+    //   this.echo(" moon");
+    // },
+    // rizz: function() {
+    //   this.echo(" ( ͡° ͜ʖ ͡°)");
+    // },
+    // shrug: function() {
+    //   this.echo(" ¯\\_(ツ)_/¯");
+    // },
+    // owo: function() {
+    //   this.echo(" 。◕‿‿◕。");
+    // },
+    // uwu: function() {
+    //   this.echo(" ( ᴗ ̫ ᴗ )");
+    // },
+    // queer: function() {
+    //   this.echo( " 🌈")
+    // },
+    // gay: function() {
+    //   this.echo( " hi tiff")
+    // },
+    // bi: function() {
+    //   this.echo( " 🌈🌈")
+    // },
+    // love: function() {
+    //   this.echo( " zero in tennis")
+    // },
+
+
+}, {
+    greetings: "Welcome to Anooshkha's interactive website! Type 'explore' to investigate."
+});
+</script>
+  </body>
+</html>
