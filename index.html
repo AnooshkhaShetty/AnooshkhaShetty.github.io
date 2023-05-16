@@ -1,36 +1,80 @@
 <!DOCTYPE html>
-
 <html lang="en-us">
-
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
-<style>
-  :root {
-     --size: 2.4;
-     --cursor-line: 0.2;
-    --background: #0f68a9;
-    --color: #7ef29d;
-  }
-  </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.terminal/css/jquery.terminal.min.css"/>
+    <style>
+      :root {
+        --size: 2.4;
+        --cursor-line: 0.2;
+        --background: #c8fdce;
+        --color: #232422;
+      }
+      header {
+        background: #cec7fd;
+        padding: 2px;
+        overflow: hidden;
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+      }
+      .topbar-title {
+        font-family: 'Courier New', monospace;
+        font-size: var(--size);
+        color: var(--color);
+        white-space: nowrap;
+        text-align: center;
+        margin: auto;
+        position: relative;
+        animation: marquee 25s linear infinite;
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .purple {
+        color: #a9a0ec;
+      }
+      body {
+        margin-top: 20px;
+      }
+    </style>
     <title>☆anooshkha☆</title>
   </head>
-
   <body>
+    <header>
+      <h1 class="topbar-title">
+        <span>☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆ welcome to my website! ☆</span>
+      </h1>
+    </header>
     <script>
 $('body').terminal({
     explore: function() {
-        this.echo(' some suggested commands:\n\tabout\n\tcurrent\n\temail\n\tsecret\n hint: there are more commands. feel free to try other keywords!');
+        this.echo(' some suggested commands:\n\tabout\n\tcurrent\n\tprojects\n\temail\n\tsecret\n hint: there are more commands. feel free to try other keywords!');
     },
     about: function() {
-      this.echo(" I major in mathematics and computer science at UCLA. \n I am part of my school's ACM club. \n Fun fact: I love the color green.");
+      this.echo(" I major in mathematics and computer science at UCLA. \n I am part of my school's ACM club. \n Fun fact: I like the color green.");
     },
     current: function() {
       this.echo(" Located in Los Angeles, CA finishing up my second year of undergrad!");
     },
+    projects: function() {
+      const projects = $('<a>',{
+    text:'check out my github!',
+    href:'https://github.com/AnooshkhaShetty',
+    class: 'purple'
+});
+      this.echo(projects);
+    },
+    
 //     spotify: function() {
 //       const spotify = $('<a>',{
 //     text:'@Anooshkha',
@@ -41,7 +85,8 @@ $('body').terminal({
     email: function() {
       const email = $('<a>',{
     text:'anooshkhashetty@gmail.com',
-    href:'mailto:anooshkhashetty@gmail.com'
+    href:'mailto:anooshkhashetty@gmail.com',
+    class: 'purple'
 });
       this.echo(email);
     },
@@ -58,7 +103,7 @@ $('body').terminal({
       this.echo(" ( ᴗ ̫ ᴗ )");
     },
 }, {
-    greetings: "Welcome to Anooshkha's interactive website! Type 'explore' to investigate."
+    greetings: "Hi I'm Anooshkha and this is my interactive website! Type 'explore' to investigate."
 });
 </script>
   </body>
